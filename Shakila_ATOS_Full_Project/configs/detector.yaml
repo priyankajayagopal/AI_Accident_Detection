@@ -1,0 +1,16 @@
+backend: auto          # auto | yolo | color | motion
+yolo:
+  weights: yolov8n.pt  # auto-downloaded by ultralytics on first use (needs internet)
+  conf: 0.35
+  imgsz: 640
+  classes: [2, 3, 5, 7]   # COCO: car, motorcycle, bus, truck  (add 0 for person)
+color:                 # detector for the synthetic demo videos only
+  min_area: 120
+  hue_tol: 6
+  min_sat: 120
+  min_val: 70
+  merge_gap_px: 6
+motion:                # generic fixed-camera fallback (median background model)
+  bg_samples: 40
+  diff_thresh: 35
+  min_area: 150

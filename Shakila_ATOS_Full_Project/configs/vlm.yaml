@@ -1,0 +1,6 @@
+backend: mock            # mock | gemini | anthropic   (env ATOS_VLM_BACKEND overrides)
+anthropic_model: claude-sonnet-4-5
+gemini_model: gemini-2.0-flash
+timeout_s: 25
+max_retries: 1
+accept_confidence: 0.60

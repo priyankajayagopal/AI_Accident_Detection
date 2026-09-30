@@ -1,0 +1,13 @@
+model_path: models/classifier/severity_v1.pkl
+metrics_path: models/classifier/severity_metrics.json
+levels: [low, medium, high, critical]
+# rule table from the proposal (slide 10) - used to label training data AND as deterministic fallback
+rules:
+  high_vehicles: 3
+  full_blockage_lanes_ratio: 1.0
+  critical_speed_kmh: 60
+gradient_boosting:
+  n_estimators: 120
+  max_depth: 3
+  learning_rate: 0.1
+  random_state: 7

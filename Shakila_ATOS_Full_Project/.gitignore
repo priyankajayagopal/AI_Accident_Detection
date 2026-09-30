@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+storage/atos.db
+logs/*.log
+data/raw/videos/*.mp4
+data/raw/videos/*.json
+data/cache/
+data/evidence/incidents/*
+!data/evidence/incidents/.gitkeep
+models/detector/yolo/*.pt
+.pytest_cache/

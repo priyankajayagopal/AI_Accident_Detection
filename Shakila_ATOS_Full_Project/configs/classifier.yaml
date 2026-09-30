@@ -1,0 +1,8 @@
+model_path: models/classifier/classifier_v1.pkl
+metrics_path: models/classifier/classifier_metrics.json
+accident_prob_threshold: 0.50
+gradient_boosting:
+  n_estimators: 150
+  max_depth: 3
+  learning_rate: 0.08
+  random_state: 42

@@ -1,0 +1,29 @@
+window_s: 3.0                # look-back window for pair signals
+contact_gap_m: 1.5           # rectangles closer than this are "in contact range"
+overlap_full: 0.25           # overlap ratio (inter / smaller area) that gives full score
+closing_speed_full_ms: 8.0
+decel_low_ms2: 4.0           # below this = ordinary braking
+decel_full_ms2: 12.0         # crash-level deceleration
+heading_change_full_deg: 45
+stationary_speed_ms: 0.8
+stationary_full_s: 2.0
+weights:
+  overlap: 0.25
+  proximity: 0.10
+  closing_speed: 0.10
+  hard_decel: 0.20
+  trajectory_change: 0.10
+  post_event_stationary: 0.25
+propose_threshold: 0.40      # recall-oriented: classifier + VLM prune false positives
+rule_only_threshold: 0.60    # baseline "YOLO + rules" detector used in the ablation
+min_evidence_frames: 8       # temporal evidence: consecutive frames above threshold
+cooldown_s: 30
+zone_suppress_m: 20          # suppress new proposals near an active one
+single_track:
+  stopped_after_moving_s: 4.0
+  prior_speed_ms: 3.0
+  queue_radius_m: 8
+congestion:
+  min_tracks: 6
+  slow_speed_ms: 4.5
+  min_duration_s: 4.0

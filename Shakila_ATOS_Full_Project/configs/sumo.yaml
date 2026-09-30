@@ -1,0 +1,26 @@
+engine: microsim          # microsim (built in, zero install) | sumo (needs SUMO + TraCI)
+corridor:
+  junctions: 5
+  spacing_m: 400
+  lanes: 2
+  speed_limit_ms: 13.9
+demand:
+  main_veh_per_hour: 2300      # calibrated peak-hour inflow, 2 lanes
+  alt_veh_per_hour: 350
+sim_seconds: 2400
+step_s: 1.0
+incident:
+  start_s: 400
+  between_junctions: [2, 3]
+  detect_to_plan_latency_s: 25
+signals:
+  cycle_s: 90
+  main_green_s: 55
+treatment:
+  diversion_compliance: 0.5
+  upstream_hold_green_s: 40
+  downstream_extension_s: 20
+emergency:
+  dispatch_delay_s: 30
+  station_distance_m: 1800
+seeds: [1, 2, 3, 4, 5, 6, 7, 8]

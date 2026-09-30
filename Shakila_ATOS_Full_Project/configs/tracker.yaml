@@ -1,0 +1,7 @@
+# ByteTrack-style two-stage association (implemented in pipeline/tracker.py)
+high_conf: 0.5
+low_conf: 0.1
+iou_match: 0.15
+max_center_dist_px: 70
+max_lost_frames: 25
+min_hits: 3

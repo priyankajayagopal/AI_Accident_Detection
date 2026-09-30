@@ -1,0 +1,15 @@
+targets:                       # slide 17
+  accident_f1: 0.85
+  accident_fpr: 0.05
+  fps: 15
+  mota: 0.70
+  severity_macro_f1: 0.80
+  count_error: 0.10
+  sumo_delay_reduction: 0.25
+  alert_latency_s: 10
+  agent_task_success: 0.90
+split: {train: 0.70, val: 0.15, test: 0.15}
+synthetic:
+  videos_per_scenario: 24
+  seconds: 16
+  fps: 20

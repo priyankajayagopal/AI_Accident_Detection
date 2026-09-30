@@ -1,0 +1,13 @@
+services:
+  db:
+    image: postgres:16
+    environment: {POSTGRES_USER: atos, POSTGRES_PASSWORD: atos, POSTGRES_DB: atos}
+    volumes: [pgdata:/var/lib/postgresql/data]
+  app:
+    build: .
+    environment:
+      DATABASE_URL: postgresql+psycopg2://atos:atos@db:5432/atos
+    ports: ["8000:8000"]
+    depends_on: [db]
+    volumes: ["./data:/app/data", "./storage:/app/storage", "./logs:/app/logs"]
+volumes: {pgdata: {}}

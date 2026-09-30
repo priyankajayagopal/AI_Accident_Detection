@@ -1,0 +1,15 @@
+app:
+  name: ATOS - Accident detection and Traffic clearance Operating System
+  env: dev
+  host: 0.0.0.0
+  port: 8000
+approval:
+  escalation_after_seconds: 120     # unapproved verified incident -> escalate to supervisor
+  operators: [operator1, operator2, admin]
+llm:
+  backend: rule                      # rule | anthropic | gemini   (env ATOS_LLM_BACKEND overrides)
+  anthropic_model: claude-sonnet-4-5
+  gemini_model: gemini-2.0-flash
+  timeout_s: 20
+audit:
+  file: logs/audit.log

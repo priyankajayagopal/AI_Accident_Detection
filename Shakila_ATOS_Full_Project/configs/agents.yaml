@@ -1,0 +1,17 @@
+orchestrator:
+  engine: auto            # auto | langgraph | simple
+  agent_timeout_s: 30
+verifier:
+  accept_score: 0.60      # combined (classifier + vlm + rule) score to mark VERIFIED
+  weights: {classifier: 0.5, vlm: 0.3, rule: 0.2}
+dispatcher:
+  service_rules:
+    low:      [police]
+    medium:   [police, tow]
+    high:     [ambulance, police]
+    critical: [ambulance, police, fire]
+  base_priority: {low: P4, medium: P3, high: P2, critical: P1}
+clearance:
+  max_green_extension_s: 40
+  min_green_s: 10
+  max_all_red_s: 15

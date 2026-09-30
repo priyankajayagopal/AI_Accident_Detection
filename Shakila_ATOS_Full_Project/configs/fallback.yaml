@@ -1,0 +1,9 @@
+# deterministic fallback handlers (safety/fallback_handlers.py)
+handlers:
+  vlm_fallback:        {trigger: "VLM timeout / invalid JSON / no key",   action: "use classifier+rules only, flag needs_review"}
+  classifier_fallback: {trigger: "classifier model missing / exception",  action: "use rule score only, flag needs_review"}
+  severity_fallback:   {trigger: "severity model missing / exception",    action: "rule table from severity.yaml"}
+  dispatch_fallback:   {trigger: "dispatcher agent fails / guardrail block", action: "template services from severity"}
+  routing_fallback:    {trigger: "routing / simulation failure",         action: "precomputed static diversion route B"}
+  report_fallback:     {trigger: "report generation failure",            action: "plain template report"}
+max_agent_retries: 1

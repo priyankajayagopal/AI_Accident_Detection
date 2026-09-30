@@ -1,0 +1,26 @@
+# Ablation evaluation
+
+- **A_rules_only (score>=0.60)**
+  - precision: `1.0`
+  - recall: `0.804`
+  - f1: `0.892`
+  - fpr_candidate: `0.0`
+  - false_alarm_videos: `0/92`
+- **B_rules_low_thr (score>=0.40, no verification)**
+  - precision: `1.0`
+  - recall: `0.826`
+  - f1: `0.905`
+  - fpr_candidate: `0.0`
+  - false_alarm_videos: `0/92`
+- **C_classifier_only (no VLM)**
+  - precision: `0.915`
+  - recall: `0.935`
+  - f1: `0.925`
+  - fpr_candidate: `0.07`
+  - false_alarm_videos: `4/92`
+- **D_full two-stage (classifier + VLM)**
+  - precision: `0.86`
+  - recall: `0.935`
+  - f1: `0.896`
+  - fpr_candidate: `0.123`
+  - false_alarm_videos: `7/92`

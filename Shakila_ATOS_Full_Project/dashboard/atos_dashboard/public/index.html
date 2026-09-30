@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ATOS Control Room</title>
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<header>
+  <div><b>ATOS</b> Control Room <span class="sub">AI accident detection &amp; smart traffic clearance - human-in-the-loop</span></div>
+  <div class="hdr-r"><label>Operator <select id="operator"><option>operator1</option><option>operator2</option><option>admin</option></select></label>
+  <span id="ws" class="pill off">offline</span></div>
+</header>
+<main>
+  <section class="card" id="live"><h2>Live video</h2>
+    <div class="row"><select id="camsel"></select><button id="startcam">Start camera</button><button class="ghost" id="stopcam">Stop</button></div>
+    <img id="stream" alt="stream (start a camera)">
+    <div id="traffic" class="kpis"></div>
+  </section>
+  <section class="card" id="incidents"><h2>Incident panel</h2><div id="inclist" class="list"></div></section>
+  <section class="card" id="detail"><h2>Incident detail</h2><div id="incdetail" class="muted">Select an incident</div></section>
+  <section class="card" id="map"><h2>Map view (Route B / emergency corridor)</h2><svg id="mapsvg" viewBox="-190 -55 860 120"></svg><div id="maplegend" class="muted"></div></section>
+  <section class="card" id="agents"><h2>Agent monitor</h2><div id="trace" class="list mono"></div></section>
+  <section class="card" id="alerts"><h2>Alerts</h2><div id="alertlist" class="list"></div></section>
+  <section class="card" id="sim"><h2>Simulation: queue length, baseline vs system</h2><svg id="simsvg" viewBox="0 0 400 160"></svg><div id="simtable"></div></section>
+  <section class="card" id="cams"><h2>Camera grid</h2><div id="camgrid" class="grid"></div></section>
+  <section class="card wide" id="reports"><h2>Reports</h2><pre id="report" class="report">Reports appear after operator approval.</pre></section>
+</main>
+<script src="/static/app.js"></script>
+</body></html>

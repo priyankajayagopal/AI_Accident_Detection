@@ -1,0 +1,1 @@
+{"name":"atos-dashboard","version":"1.0.0","private":true,"description":"Static dashboard served by FastAPI (no build step). Port to React/Next.js later if required.","scripts":{"start":"python -m scripts.run_server"}}

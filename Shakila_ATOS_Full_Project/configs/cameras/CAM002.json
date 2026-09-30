@@ -1,0 +1,111 @@
+{
+  "camera_id": "CAM002",
+  "name": "OMR Service Road junction",
+  "road_segment": "J1-J2",
+  "junction_id": "J1",
+  "latitude": 13.085,
+  "longitude": 80.275,
+  "fps": 20,
+  "frame_size": [
+    640,
+    360
+  ],
+  "px_per_meter": 8.0,
+  "lanes": [
+    {
+      "id": "H-W1",
+      "name": "Westbound outer",
+      "dir": "W",
+      "rect": [
+        0,
+        124,
+        640,
+        152
+      ]
+    },
+    {
+      "id": "H-W2",
+      "name": "Westbound inner",
+      "dir": "W",
+      "rect": [
+        0,
+        152,
+        640,
+        180
+      ]
+    },
+    {
+      "id": "H-E1",
+      "name": "Eastbound inner",
+      "dir": "E",
+      "rect": [
+        0,
+        180,
+        640,
+        208
+      ]
+    },
+    {
+      "id": "H-E2",
+      "name": "Eastbound outer",
+      "dir": "E",
+      "rect": [
+        0,
+        208,
+        640,
+        236
+      ]
+    },
+    {
+      "id": "V-S1",
+      "name": "Southbound outer",
+      "dir": "S",
+      "rect": [
+        264,
+        0,
+        292,
+        360
+      ]
+    },
+    {
+      "id": "V-S2",
+      "name": "Southbound inner",
+      "dir": "S",
+      "rect": [
+        292,
+        0,
+        320,
+        360
+      ]
+    },
+    {
+      "id": "V-N1",
+      "name": "Northbound inner",
+      "dir": "N",
+      "rect": [
+        320,
+        0,
+        348,
+        360
+      ]
+    },
+    {
+      "id": "V-N2",
+      "name": "Northbound outer",
+      "dir": "N",
+      "rect": [
+        348,
+        0,
+        376,
+        360
+      ]
+    }
+  ],
+  "max_capacity_vehicles": 14,
+  "corridor_edge": "J1-J2",
+  "demo_video": "data/raw/videos/demo_normal.mp4",
+  "demo_scenario": "normal",
+  "height_m": 9,
+  "angle": "overhead",
+  "source": "file"
+}
